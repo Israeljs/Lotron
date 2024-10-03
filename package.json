@@ -1,0 +1,23 @@
+{
+  "name": "lotron",
+  "version": "1.0.0",
+  "description": "gerador e eliminador de jogos ruins de lotofacil",
+  "main": "src/server.js",
+  "engines": {
+    "node": "20.15.1"
+  },
+  "scripts": {
+    "start": "src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "test"
+  },
+  "init-author-name": "israel-jeronimo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "lts": "^1.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
