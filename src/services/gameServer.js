@@ -9,7 +9,7 @@ module.exports = {
       games.push(gameGenerator())
     }
 
-    const gamesFiltered = games.filter((game) => sumOfTensFilter(game))
+    const gamesFiltered = games.filter((game) => sumOfTensFilter(game)[0])
 
     return gamesFiltered
   },
