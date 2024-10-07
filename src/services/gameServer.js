@@ -1,5 +1,6 @@
 const gameGenerator = require('../helper/gameGenerator')
 const sumOfTensFilter = require('../filters/basicFilters/sumOfTensFilter')
+const alreadyWonFilter = require('../filters/basicFilters/alreadyWonFilter')
 
 module.exports = {
   gameFilter: (quantity) =>  {
@@ -10,6 +11,7 @@ module.exports = {
     }
 
     const gamesFiltered = games.filter((game) => sumOfTensFilter(game)[0])
+      .alreadyWonFilter(game)[0]
 
     return gamesFiltered
   },
