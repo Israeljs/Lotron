@@ -11,7 +11,7 @@ module.exports = {
     }
 
     const gamesFiltered = games.filter((game) => sumOfTensFilter(game)[0])
-      .alreadyWonFilter(game)[0]
+      .filter((game) => alreadyWonFilter(game)[0])
 
     return gamesFiltered
   },
