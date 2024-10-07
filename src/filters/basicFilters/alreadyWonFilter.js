@@ -16,7 +16,7 @@ const isEqual = (result, game) => {
 const alreadyWonFilter = (game) => {
   allResults = lastResult()
 
-  return  allResults.every(({ result }) => isEqual(result.map(Number), game))
+  return allResults.every((result) => isEqual(result.map(Number), game))
 }
-
+      
 module.exports = alreadyWonFilter
