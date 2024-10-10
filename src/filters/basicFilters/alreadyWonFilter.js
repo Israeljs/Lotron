@@ -1,3 +1,4 @@
+// Verificar se o jogo já fez 14 ou 15 pontos
 const lastResult = require('../../helper/lastResult')
 
 const isEqual = (result, game) => {

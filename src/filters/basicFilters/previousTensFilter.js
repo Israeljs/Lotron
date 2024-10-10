@@ -3,7 +3,6 @@ const lastResult = require('../../helper/lastResult')
 
 const previousTensFilter = (game) => {
   const resultLast = lastResult(1)[1]
-  // console.log(resultLast);
   let count = 0
   let result = false
 
@@ -24,3 +23,5 @@ module.exports = previousTensFilter
 //  19, 22, 23, 26
 // ]
 // console.log(previousTensFilter(game)[0])
+
+// node src/filters/basicFilters/previousTensFilter.js 
