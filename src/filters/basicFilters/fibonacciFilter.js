@@ -1,5 +1,5 @@
 const fibonacci = [01, 02, 03, 05, 08, 13, 21]
-const idealNumber = [03, 04, 05, 06, 07]
+const idealNumber = [02, 03, 04, 05, 06]
 
 
 const isAIdealNumber = (count, numberIdeal) => {
@@ -7,17 +7,17 @@ const isAIdealNumber = (count, numberIdeal) => {
   return result
 }
 
-const filtroFibonacci = (jogo) => {
+const fibonacciFilter = (game) => {
 
   let countFibonacci = 0
 
-  jogo.forEach((dezena) => {
-    let areThere = fibonacci.includes(dezena)
+  game.forEach((ten) => {
+    let areThere = fibonacci.includes(ten)
     if (areThere) {
       countFibonacci += 1
     }
   })
-  return [isAIdealNumber(countFibonacci, idealNumber), `fibonacci: ${countFibonacci}`, '4-34 5-28 3-19 6-10 2-']
+  return [isAIdealNumber(countFibonacci, idealNumber), `fibonacci: ${countFibonacci}`, '4-34 5-28 3-19 6-10 2-6']
 }
 
-module.exports = filtroFibonacci
+module.exports = fibonacciFilter
