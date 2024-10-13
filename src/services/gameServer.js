@@ -2,6 +2,7 @@ const gameGenerator = require('../helper/gameGenerator')
 const sumOfTensFilter = require('../filters/basicFilters/sumOfTensFilter')
 const alreadyWonFilter = require('../filters/basicFilters/alreadyWonFilter')
 const previousTensFilter = require('../filters/basicFilters/previousTensFilter')
+const fibonacciFilter = require('../filters/basicFilters/fibonacciFilter')
 
 module.exports = {
   gameFilter: (quantity) =>  {
@@ -14,6 +15,7 @@ module.exports = {
     const gamesFiltered = games.filter((game) => sumOfTensFilter(game)[0])
       .filter((game) => alreadyWonFilter(game)[0])
       .filter((game) => previousTensFilter(game)[0])
+      .filter((game) => fibonacciFilter(game)[0])
 
     return gamesFiltered
   },
