@@ -5,6 +5,7 @@ const sumOfTensFilter = require('../filters/basicFilters/sumOfTensFilter')
 const previousTensFilter = require('../filters/basicFilters/previousTensFilter')
 const fibonacciFilter = require('../filters/basicFilters/fibonacciFilter')
 const oddFilter = require('../filters/basicFilters/oddFilter')
+const frameFilter = require('../filters/basicFilters/frameFilter')
 
 const percentage = (numerator ,denominator) => {
 // return `${(numerator/denominator)*100}%`
@@ -16,9 +17,9 @@ const games = lastResult()
 
 const gameFilter = () => {
   console.log(games.length) //3189
-
+    //  const gamesFiltered = games.filter((game) => frameFilter(game)[0]) // 99%
   // const gamesFiltered = games.filter((game) => sumOfTensFilter(game)[0]) // 95%
-  // const gamesFiltered = games.filter((game) => previousTensFilter(game)[0]) // 77%
+  // const gamesFiltered = games.filter((game) => previousTensFilter(game)[0]) // 96%
   // const gamesFiltered = games.filter((game) => fibonacciFilter(game)[0]) // 98%
   // const gamesFiltered = games.filter((game) => oddFilter(game)[0]) // 95%
   const gamesFiltered = games.filter((game) => sumOfTensFilter(game)[0]) // 95%
@@ -26,6 +27,7 @@ const gameFilter = () => {
     .filter((game) => previousTensFilter(game)[0])
     .filter((game) => fibonacciFilter(game)[0])
     .filter((game) => oddFilter(game)[0])
+    .filter((game) => frameFilter(game)[0])
 
   console.log(gamesFiltered.length)
   console.log(`${Math.floor(percentage(gamesFiltered.length, games.length))}%`) // (`${Math.floor(percentage(2234, 3189))}%`)

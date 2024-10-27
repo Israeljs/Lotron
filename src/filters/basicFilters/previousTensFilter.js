@@ -10,7 +10,7 @@ const previousTensFilter = (game) => {
     if (resultLast.includes(ten)) count += 1
   })
   // Observa-se o padrão de dez dezenas do concurso anterior no início do ciclo das dezenas
-  if (count >= 8 && count <= 10) result = true
+  if (count >= 7 && count <= 11) result = true
 
   return [result, `anteriores: ${count}`, '9-32 8-24 10-21 7-9 11-8']
 }
