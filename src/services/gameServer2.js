@@ -6,6 +6,7 @@ const previousTensFilter = require('../filters/basicFilters/previousTensFilter')
 const fibonacciFilter = require('../filters/basicFilters/fibonacciFilter')
 const oddFilter = require('../filters/basicFilters/oddFilter')
 const frameFilter = require('../filters/basicFilters/frameFilter')
+const sequenceFilter = require('../filters/basicFilters/sequenceFilter')
 
 const percentage = (numerator ,denominator) => {
 // return `${(numerator/denominator)*100}%`
@@ -28,6 +29,8 @@ const gameFilter = () => {
     .filter((game) => fibonacciFilter(game)[0])
     .filter((game) => oddFilter(game)[0])
     .filter((game) => frameFilter(game)[0])
+    .filter((game) => sequenceFilter(game)[0])
+
 
   console.log(gamesFiltered.length)
   console.log(`${Math.floor(percentage(gamesFiltered.length, games.length))}%`) // (`${Math.floor(percentage(2234, 3189))}%`)
